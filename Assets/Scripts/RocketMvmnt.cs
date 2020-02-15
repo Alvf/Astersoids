@@ -25,7 +25,7 @@ public class RocketMvmnt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.rotation -= rotsp * Input.GetAxis("Horizontal") * Time.deltaTime;
+        rb.AddTorque(Input.GetAxis("Horizontal") * -rotsp);
         direction.x = Mathf.Cos((rb.rotation+90)*Mathf.Deg2Rad);
         direction.y = Mathf.Sin((rb.rotation+90)*Mathf.Deg2Rad);
 
@@ -36,25 +36,6 @@ public class RocketMvmnt : MonoBehaviour
 
         rb.velocity = Vector2.SmoothDamp(rb.velocity, Vector2.zero, ref velo, slowtime, speedmax);
 
-        screenwrap();
     }
-    void screenwrap()
-    {
-        if (rb.position.x > 9)
-        {
-            rb.MovePosition(new Vector2(rb.position.x - 18,rb.position.y));
-        }
-        if (rb.position.x < -9)
-        {
-            rb.MovePosition(new Vector2(rb.position.x + 18, rb.position.y));
-        }
-        if (rb.position.y > 5)
-        {
-            rb.MovePosition(new Vector2(rb.position.x,rb.position.y - 10));
-        }
-        if (rb.position.y < -5)
-        {
-            rb.MovePosition(new Vector2(rb.position.x, rb.position.y + 10));
-        } 
-    }
+ 
 }
