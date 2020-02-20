@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn_frequency: 0.001
-  thing_to_spawn: {fileID: 8470486438063478437, guid: cdfe2616d6432584dbe447af06996f38,
+  thing_to_spawn: {fileID: 350744498994811643, guid: 96cc067a2dd75444fb24d99825ecc517,
     type: 3}
   spawndelay: 1
   limit: 10
