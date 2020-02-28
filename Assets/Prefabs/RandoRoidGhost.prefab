@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 350744498994811647}
   sw: {fileID: 5771177974597852935}
+  spin: 1
 --- !u!114 &6035029724639692382
 MonoBehaviour:
   m_ObjectHideFlags: 0

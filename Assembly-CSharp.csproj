@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Boid.cs" />
+    <Compile Include="Assets\Scripts\Floatie.cs" />
     <Compile Include="Assets\Scripts\HoverColor.cs" />
     <Compile Include="Assets\Scripts\MenuControls.cs" />
     <Compile Include="Assets\Scripts\MeteorMover.cs" />

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Asteroid2.unity
     guid: 5bf6beb1a2375534aadb83e2d7ddef3f
+  - enabled: 1
+    path: Assets/Scenes/Bulldozer.unity
+    guid: b93d8431da2eee84ca10b9a9989f6a36
+  - enabled: 1
+    path: Assets/Scenes/AsterBoids.unity
+    guid: dae32039f895be943b3876330d260507
   m_configObjects: {}

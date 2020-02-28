@@ -133,3 +133,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8470486438063478433}
   sw: {fileID: 8470486438063478438}
+  spin: 1

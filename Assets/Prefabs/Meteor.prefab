@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8470486438063478433}
   sw: {fileID: 8470486438063478438}
+  spin: 1
 --- !u!60 &2950585102595498785
 PolygonCollider2D:
   m_ObjectHideFlags: 0
