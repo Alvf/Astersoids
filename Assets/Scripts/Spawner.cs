@@ -11,6 +11,9 @@ public class Spawner : MonoBehaviour
     public float spawndelay;
     public int limit;
     public int count;
+    public Camera cam;
+    public bool withplayer;
+    public float dangerzone;
 
 
     private float spawntime;
@@ -19,15 +22,27 @@ public class Spawner : MonoBehaviour
     {
         spawntime = Time.time;
         count = 0;
+        cam = Camera.main;    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Random.Range(0, 1) < spawn_frequency && Time.time-spawntime > spawndelay && count<limit)
+        if (Random.Range(0.0F, 1.0F) < spawn_frequency && Time.time-spawntime > spawndelay && count<limit)
 
         {
-            Instantiate(thing_to_spawn, new Vector3(0, 0, 0), Quaternion.identity);
+
+            var spawnpos = new Vector3(Random.Range(0.0F, 1.0F), Random.Range(0.0F, 1.0F), 0);
+            spawnpos = cam.ViewportToWorldPoint(spawnpos);
+            spawnpos.Set(spawnpos.x, spawnpos.y, 0);
+            while (Vector3.Distance(spawnpos, GameObject.FindWithTag("BoidPredator").transform.position) <= dangerzone)
+            {
+                spawnpos = new Vector3(Random.Range(0.0F, 1.0F), Random.Range(0.0F, 1.0F), 0);
+                spawnpos = cam.ViewportToWorldPoint(spawnpos);
+                spawnpos.Set(spawnpos.x, spawnpos.y, 0);
+            }
+
+            Instantiate(thing_to_spawn, spawnpos, Quaternion.identity);
             count++;
             spawntime = Time.time;
         }

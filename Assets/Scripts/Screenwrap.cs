@@ -24,25 +24,25 @@ public class Screenwrap : MonoBehaviour
             var screenpos = screencam.WorldToScreenPoint(transform.position);
 
             //also make some helper variables for the bottom left and upper right corners (+1 pixel padding to avoid weird tearing)
-            var ur = new Vector3(screencam.pixelWidth - 1, screencam.pixelHeight - 1, -1);
-            var bl = new Vector3(1, 1, -1);
+            var ur = new Vector3(screencam.pixelWidth - 1, screencam.pixelHeight - 1, 0);
+            var bl = new Vector3(1, 1, 0);
 
             //then compare it with the camera's width and height values to figure out if it's offscreen:
             if (screenpos.x > screencam.pixelWidth)
             {
-                transform.position = new Vector3(screencam.ScreenToWorldPoint(bl).x, transform.position.y, -1);
+                transform.position = new Vector3(screencam.ScreenToWorldPoint(bl).x, transform.position.y, 0);
             }
             if (screenpos.x < 0)
             {
-                transform.position = new Vector3(screencam.ScreenToWorldPoint(ur).x, transform.position.y, -1);
+                transform.position = new Vector3(screencam.ScreenToWorldPoint(ur).x, transform.position.y, 0);
             }
             if (screenpos.y > screencam.pixelHeight)
             {
-                transform.position = new Vector3(transform.position.x, screencam.ScreenToWorldPoint(bl).y, -1);
+                transform.position = new Vector3(transform.position.x, screencam.ScreenToWorldPoint(bl).y, 0);
             }
             if (screenpos.y < 0)
             {
-                transform.position = new Vector3(transform.position.x, screencam.ScreenToWorldPoint(ur).y, -1);
+                transform.position = new Vector3(transform.position.x, screencam.ScreenToWorldPoint(ur).y, 0);
             }
         }
     }
