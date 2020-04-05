@@ -9,6 +9,8 @@ public class MenuControls : MonoBehaviour
     public bool OnlyRoids;
     public bool DozerRoids;
     public bool AsterBoids;
+    public bool Asteroids;
+
    void OnMouseUp()
     {
         if (EmptyRoids)
@@ -26,6 +28,10 @@ public class MenuControls : MonoBehaviour
         if (AsterBoids)
         {
             SceneManager.LoadScene("AsterBoids");
+        }
+        if (Asteroids)
+        {
+            SceneManager.LoadScene("Mortal");
         }
     }
 }

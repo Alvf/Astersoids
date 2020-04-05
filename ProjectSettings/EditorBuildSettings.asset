@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AsterBoids.unity
     guid: dae32039f895be943b3876330d260507
+  - enabled: 1
+    path: Assets/Scenes/Mortal.unity
+    guid: 301f819c27a2fb34da65ff87a963913e
   m_configObjects: {}

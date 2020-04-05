@@ -6,7 +6,6 @@ public class MeteorMover : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody2D rb;
-    public Screenwrap sw;
     public bool spin;
 
     void Start()
@@ -17,5 +16,10 @@ public class MeteorMover : MonoBehaviour
         {
             rb.AddTorque(Random.Range(-10.0f, 10.0f));
         }
+    }
+
+    void OnDestroy()
+    {
+        GameObject.FindWithTag("Respawn").GetComponent<Spawner>().count -= 1;
     }
 }

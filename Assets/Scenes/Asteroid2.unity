@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 1585972712}
   m_Layer: 0
   m_Name: MeteorSpawner
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,12 +328,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35353c3f2f4768942b13f9f9410ce5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn_frequency: 0.001
+  spawn_frequency: 0.01
   thing_to_spawn: {fileID: 350744498994811643, guid: 91de7b140b30bf34bbcfef8c42a7a008,
     type: 3}
   spawndelay: 1
   limit: 90
   count: 0
+  cam: {fileID: 0}
+  withplayer: 0
+  dangerzone: 0
 --- !u!1001 &3156573876287095918
 PrefabInstance:
   m_ObjectHideFlags: 0

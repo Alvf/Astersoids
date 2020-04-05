@@ -16,12 +16,10 @@ public class Mortality : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (Time.time - oldhit >= invin)
+        if (Time.time - oldhit >= invin && other.tag == "Boid")
         {
             lives--;
-            Debug.Log("HIT!");
             Destroy(other.gameObject);
-            GameObject.FindWithTag("Respawn").GetComponent<Spawner>().count -= 1;
             if (lives == 0)
             {
                 SceneManager.LoadScene("Menu");

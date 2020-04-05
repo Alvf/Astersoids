@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 1292500367}
   m_Layer: 0
   m_Name: MeteorSpawner
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388,14 +388,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35353c3f2f4768942b13f9f9410ce5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn_frequency: 0.001
+  spawn_frequency: 0.01
   thing_to_spawn: {fileID: 350744498994811643, guid: 8473708136b44174e9bc96137ae0366b,
     type: 3}
   spawndelay: 1
   limit: 40
   count: 0
-  screencam: {fileID: 0}
-  withplayer: 1
+  cam: {fileID: 0}
+  withplayer: 0
   dangerzone: 0.1
 --- !u!4 &1292500368
 Transform:
@@ -478,5 +478,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReturnListener
       objectReference: {fileID: 0}
+    - target: {fileID: 3156573875426344821, guid: dd7baa47c99a4b644b3777d36e14b264,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd7baa47c99a4b644b3777d36e14b264, type: 3}
+--- !u!1 &2138938594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7684900068221489527, guid: a9a946e7a42a84a449ff5806b181e37a,
+    type: 3}
+  m_PrefabInstance: {fileID: 278245716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2138938595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138938594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7495f5cd31b24f49b79bcb903ad2bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotspeed: 4
+  shotlife: 2
+  disp: 0.5
+  rb: {fileID: 0}
+  shot: {fileID: 7902534691914375241, guid: c0a552412c150c642add2290e0186d6b, type: 3}

@@ -30,6 +30,7 @@ public class Boid : MonoBehaviour
     void Update()
     {
         boids = GameObject.FindGameObjectsWithTag("Boid");
+        predators = GameObject.FindGameObjectsWithTag("BoidPredator");
         Velocitymatch(boids,sightradius,vmatchbias);
         Cohesion(boids,sightradius,cohesionbias);
         Avoidance(boids,avoidradius,avoidancebias);

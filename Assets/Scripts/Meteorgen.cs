@@ -29,8 +29,6 @@ public class Meteorgen : MonoBehaviour
             colverts[i] = new Vector2(lineverts[i].x, lineverts[i].y);
         }
 
-        Debug.Log(colverts.Length);
-
         lr.positionCount = numverts;
         lr.SetPositions(lineverts);
 
