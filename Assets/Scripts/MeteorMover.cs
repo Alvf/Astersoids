@@ -18,8 +18,4 @@ public class MeteorMover : MonoBehaviour
         }
     }
 
-    void OnDestroy()
-    {
-        GameObject.FindWithTag("Respawn").GetComponent<Spawner>().count -= 1;
-    }
 }

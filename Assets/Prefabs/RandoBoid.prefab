@@ -184,7 +184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 350744498994811647}
-  sw: {fileID: 5771177974597852935}
   spin: 0
 --- !u!114 &3022537943763167824
 MonoBehaviour:
